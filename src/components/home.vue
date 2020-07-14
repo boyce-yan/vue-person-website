@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     goToBlog() {
-      window.location.href = this.$config.BLOG_URL;
+      window.open(this.$config.BLOG_URL);  
     },
     _jieliu(callback, delay) {
       let currentTime = new Date();

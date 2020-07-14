@@ -5,10 +5,10 @@
         <div
           :class="[
             'nav_item',
-            { active: sortData[sortIndex].sortId == item.sortId }
+            { active: sortData[sortIndex].id == item.id }
           ]"
           v-for="(item, index) in sortData"
-          :key="item.sortId"
+          :key="item.id"
           @click="changeSortIndex(index)"
         >
           {{ item.title }}
@@ -20,7 +20,7 @@
     </div>
     <div class="scroll-wrapper main">
       <transition-group tag="div" class="row scroll-content" name="list">
-        <div class="col page_item" v-for="item in pagesData" :key="item.pageId">
+        <div class="col page_item" v-for="item in pagesData" :key="item.id">
           <a :href="item.url" class="page" :title="item.title">
             <div class="left">
               <div class="title">{{ item.title }}</div>
@@ -41,7 +41,7 @@
     </div>
     <div class="footer" v-if="$config.FOOTER_INFO">
       <i class="mdi mdi-fountain-pen-tip"></i> Designed By
-      <a href="https://github.com/EsunR/Blog-Index">EsunR</a>
+      Y
     </div>
   </div>
 </template>
@@ -73,12 +73,13 @@ export default {
   methods: {
     getPages() {
       return new Promise((resolve, reject) => {
-        let sortId = this.sortData[this.sortIndex].sortId;
+        let sortId = this.sortData[this.sortIndex].id;
         if (this.$config.SERVE) {
           this.axios
-            .get("/getPages?sortId=" + sortId)
+            .get("/personal-pages/list?sortId=" + sortId)
             .then(res => {
               this.pagesData = res.data.data;
+              console.log(this.pagesData)
               resolve();
             })
             .catch(err => {
@@ -91,6 +92,7 @@ export default {
             let item = this.$config.PAGES_DATA[i];
             if (item.sortId == sortId) {
               this.pagesData.push(item);
+              
             }
           }
           resolve();
@@ -101,9 +103,9 @@ export default {
       return new Promise((resolve, reject) => {
         if (this.$config.SERVE) {
           this.axios
-            .get("/getSort")
+            .get("/personal-sort/list")
             .then(res => {
-              if (res.data.code == 1) {
+              if (res.data.code == 200) {
                 this.sortData = res.data.data;
                 resolve();
               } else {
@@ -262,8 +264,8 @@ export default {
           .right {
             width: 20%;
             img {
-              width: 100%;
-              height: 100%;
+              width: 90%;
+              height: 90%;
             }
           }
         }
