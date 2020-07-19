@@ -21,7 +21,7 @@
     <div class="scroll-wrapper main">
       <transition-group tag="div" class="row scroll-content" name="list">
         <div class="col page_item" v-for="item in pagesData" :key="item.id">
-          <a :href="item.url" class="page" :title="item.title">
+          <a :href="item.url" class="page" target="_blank" :title="item.title">
             <div class="left">
               <div class="title">{{ item.title }}</div>
               <div class="subtitle">{{ item.subtitle }}</div>
