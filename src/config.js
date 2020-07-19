@@ -23,7 +23,7 @@ const PAGES_DATA = [
     sortId: 1,
     title: "主标题",
     subtitle: "副标题",
-    url: "http://www.YourWebPage.com/",
+    url: "http://www.yxl520.cn/",
     icon: ""
   },
   {
@@ -31,7 +31,7 @@ const PAGES_DATA = [
     sortId: 2,
     title: "主标题",
     subtitle: "副标题",
-    url: "http://www.YourWebPage.xyz/",
+    url: "http://www.yxl520.cn/",
     icon: ""
   }
 ]; // 网站分类列表，请按照API.md中'/getPages'接口中返回的data格式填写
