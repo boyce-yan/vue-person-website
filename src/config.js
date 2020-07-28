@@ -1,6 +1,6 @@
 const SERVE = true; // 是否使用线上服务器
 
-const HOST = "http://127.0.0.1:8881"; // 线上服务器地址，如果不使用请留空
+const HOST = "http://api.yxl520.cn:8881/"; // 线上服务器地址，如果不使用请留空
 
 const BLOG_NAME = "YXL-Blog"; // 个人网站名字
 
