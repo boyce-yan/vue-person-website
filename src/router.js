@@ -9,15 +9,24 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect: '/home'
+      redirect: '/home',
+      meta:{
+        title : 'YXL'
+      }
     },
     {
       path: '/home',
-      component: home
+      component: home,
+      meta:{
+        title : 'YXL'
+      }
     },
     {
       path: '/center',
-      component: center
+      component: center,
+      meta:{
+        title : 'YXL'
+      }
     }
   ]
 })
