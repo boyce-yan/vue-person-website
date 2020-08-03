@@ -1,4 +1,5 @@
 <template>
+
   <div id="home" @mousewheel="handleMouseWheel" v-swipeup="showCenter">
     <!-- 遮罩：防止用户在动画播放期间点击屏幕 -->
     <div
@@ -23,7 +24,7 @@
       <div class="inner" style="cursor: pointer" @click="goToBlog">
         <img
           :class="['R_logo', { R_logo_top: flag }]"
-          src="../assets/logo.svg"
+          src="https://qiniu.gaobinzhan.com/2020/06/25/8045a6b2b050b.jpeg"
         />
         <div :class="['hello', { hello_bottom: flag }]">
           <div>{{ slogan[i] }}</div>

@@ -8,7 +8,7 @@ const BLOG_URL = "http://blog.yxl520.cn/"; // 个人网站链接（请填写完�
 
 const GITHUB = ""; // 右上角 Github 图标链接，留空不显示
 
-const BACKGROUND_IMG_URL = "https://qiniu.gaobinzhan.com/2020/07/13/3877b034cd53f.jpg"; // 背景图片url，留空默认为必应每日图片
+const BACKGROUND_IMG_URL = ""; // 背景图片url，留空默认为必应每日图片
 
 const SORT_DATA = [
   { sortId: 1, title: "示例分类1" },
@@ -38,9 +38,8 @@ const PAGES_DATA = [
 
 const SLOGAN = [
   "欢迎拜访",
-  "歡迎拜訪",
   "Welcome, my friend!",
-  "訪問へようこそ",
+  "心灵的港湾",
   "嗨，别来无恙",
   "不忘初心，一生浪漫",
   "最近还好吗？",
