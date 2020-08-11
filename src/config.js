@@ -1,18 +1,18 @@
 const SERVE = true; // 是否使用线上服务器
 
-const HOST = "http://api.yxl520.cn:8881/"; // 线上服务器地址，如果不使用请留空
+const HOST = "http://api.yanxiaolong.cn/"; // 线上服务器地址，如果不使用请留空
 
 const BLOG_NAME = "YXL-Blog"; // 个人网站名字
 
-const BLOG_URL = "http://blog.yxl520.cn/"; // 个人网站链接（请填写完整链接）
+const BLOG_URL = "http://blog.yanxiaolong.cn/"; // 个人网站链接（请填写完整链接）
 
 const GITHUB = ""; // 右上角 Github 图标链接，留空不显示
 
 const BACKGROUND_IMG_URL = ""; // 背景图片url，留空默认为必应每日图片
 
 const SORT_DATA = [
-  { sortId: 1, title: "示例分类1" },
-  { sortId: 2, title: "示例分类2" }
+  { sortId: 1, title: "个人展示" },
+ // { sortId: 2, title: "示例分类2" }
 ]; // 网站分类列表，请按照API.md中'/getSort'接口中返回的data格式填写
 
 const RECORD_NUMBER = "蒙ICP备20002688号"; // 网站备案号，留空不显示
@@ -21,9 +21,9 @@ const PAGES_DATA = [
   {
     pageId: 1,
     sortId: 1,
-    title: "主标题",
-    subtitle: "副标题",
-    url: "http://www.yxl520.cn/",
+    title: "个人博客",
+    subtitle: "我的",
+    url: "http://www.yanxiaolong.cn/",
     icon: ""
   },
   {
@@ -31,7 +31,7 @@ const PAGES_DATA = [
     sortId: 2,
     title: "主标题",
     subtitle: "副标题",
-    url: "http://www.yxl520.cn/",
+    url: "http://www.yanxiaolong.cn/",
     icon: ""
   }
 ]; // 网站分类列表，请按照API.md中'/getPages'接口中返回的data格式填写
