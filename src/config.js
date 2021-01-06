@@ -8,7 +8,7 @@ const BLOG_URL = "http://blog.yanxiaolong.cn/"; // 个人网站链接（请填�
 
 const GITHUB = ""; // 右上角 Github 图标链接，留空不显示
 
-const BACKGROUND_IMG_URL = ""; // 背景图片url，留空默认为必应每日图片
+const BACKGROUND_IMG_URL = "http://image.yanxiaolong.cn/aa.jpg"; // 背景图片url，留空默认为必应每日图片
 
 const SORT_DATA = [
   { sortId: 1, title: "个人展示" },
@@ -37,14 +37,14 @@ const PAGES_DATA = [
 ]; // 网站分类列表，请按照API.md中'/getPages'接口中返回的data格式填写
 
 const SLOGAN = [
-  "欢迎拜访",
-  "Welcome, my friend!",
-  "心灵的港湾",
-  "嗨，别来无恙",
-  "不忘初心，一生浪漫",
-  "最近还好吗？",
-  "流星，落花，萤火",
-  "马车越空，晃荡越响"
+  "『纵有疾风起,人生不言弃』",
+  " Welcome, my friend! ",
+  " 心灵的港湾 ",
+  " 嗨，别来无恙 ",
+  " 不忘初心，一生浪漫 ",
+  " 最近还好吗？ ",
+  " 流星，落花，萤火 ",
+  " 马车越空，晃荡越响 "
 ]; // 在Logo下方显示的标题
 
 const FOOTER_INFO = true; // 是否显示抽屉右下角的文字信息

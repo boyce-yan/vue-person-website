@@ -1,7 +1,13 @@
 <template>
   <div id="center">
+  <span style="text-align: center;display:block;">『纵有疾风起，人生不言弃』</span>
+  
+  <br>
+
     <div class="top">
       <nav class="nav_wrap">
+    
+      
         <div
           :class="[
             'nav_item',

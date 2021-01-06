@@ -9,12 +9,7 @@
     ></div>
 
     <!-- github 徽标 -->
-    <a
-      v-if="$config.GITHUB"
-      class="github mdi mdi-github-circle"
-      :href="$config.GITHUB"
-    ></a>
-
+  
     <!-- 中间LOGO部分 -->
     <div
       :style="{ background: `url(${imgUrl})` }"
