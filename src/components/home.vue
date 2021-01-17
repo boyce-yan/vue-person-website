@@ -19,7 +19,7 @@
       <div class="inner" style="cursor: pointer" @click="goToBlog">
         <img
           :class="['R_logo', { R_logo_top: flag }]"
-          src="https://qiniu.gaobinzhan.com/2020/06/25/8045a6b2b050b.jpeg"
+          src="http://image.yanxiaolong.cn/1610846327819.jpeg"
         />
         <div :class="['hello', { hello_bottom: flag }]">
           <div>{{ slogan[i] }}</div>
