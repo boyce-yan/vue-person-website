@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import router from './router'
 import "../node_modules/@mdi/font/css/materialdesignicons.min.css"
 import "./assets/mobile-event"
@@ -12,6 +14,8 @@ Vue.use(VueAxios, axios);
 axios.defaults.baseURL = config.HOST;
 
 Vue.config.productionTip = false
+Vue.use(ElementUI);
+
 
 new Vue({
   router,

@@ -1,5 +1,7 @@
 <template>
   <div id="center">
+   
+  
   <span style="text-align: center;display:block;">『纵有疾风起，人生不言弃』</span>
   
   <br>
@@ -45,22 +47,40 @@
         </div>
       </transition-group>
     </div>
-    <div class="footer" v-if="$config.FOOTER_INFO">
-      <i class="mdi mdi-fountain-pen-tip"></i> Designed By
-      YXL
+ 
+    <div>
+      <el-pagination
+          background
+          @current-change="handleCurrentChange"
+          layout="total,prev, pager, next"
+          :total="this.pageEntity.total">
+          
+      </el-pagination>
     </div>
+    
+    <div class="footer" v-if="$config.FOOTER_INFO">
+      <i class="mdi mdi-fountain-pen-tip"></i> Designed By YXL
+    </div>
+    
   </div>
+  
 </template>
 
 <script>
 import BScroll from "better-scroll";
 export default {
   data() {
+  
     return {
       sortData: [],
       sortIndex: 0,
       pagesData: [],
-      scroller: null
+      scroller: null,
+      pageEntity: {
+        current:1,
+        pageSize:12,
+        total:0
+      }
     };
   },
   computed: {
@@ -76,15 +96,27 @@ export default {
       }
     }
   },
+
+
   methods: {
+
+      
+      handleCurrentChange(val) {
+        console.log('当前页: '+val);
+        this.pageEntity.current = val
+        this.getPages();
+      },
+
+
     getPages() {
       return new Promise((resolve, reject) => {
         let sortId = this.sortData[this.sortIndex].id;
         if (this.$config.SERVE) {
           this.axios
-            .get("/personal-pages/list?sortId=" + sortId)
+            .post("/api/v1/personal-pages/selectPageList?sortId="  + sortId,this.pageEntity)
             .then(res => {
-              this.pagesData = res.data.data;
+              this.pagesData = res.data.data.records;
+              this.pageEntity.total = res.data.data.total
               console.log(this.pagesData)
               resolve();
             })
@@ -109,7 +141,7 @@ export default {
       return new Promise((resolve, reject) => {
         if (this.$config.SERVE) {
           this.axios
-            .get("/personal-sort/list")
+            .get("/api/v1/personal-sort/queryList")
             .then(res => {
               if (res.data.code == 200) {
                 this.sortData = res.data.data;

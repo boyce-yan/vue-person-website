@@ -4,7 +4,7 @@ const HOST = "http://api.yanxiaolong.cn/"; // 线上服务器地址，如果不�
 
 const BLOG_NAME = "YXL-Blog"; // 个人网站名字
 
-const BLOG_URL = "http://blog.yanxiaolong.cn/"; // 个人网站链接（请填写完整链接）
+const BLOG_URL = "https://blog.yanxiaolong.cn/"; // 个人网站链接（请填写完整链接）
 
 const GITHUB = ""; // 右上角 Github 图标链接，留空不显示
 
@@ -23,7 +23,7 @@ const PAGES_DATA = [
     sortId: 1,
     title: "个人博客",
     subtitle: "我的",
-    url: "http://www.yanxiaolong.cn/",
+    url: "https://www.yanxiaolong.cn/",
     icon: ""
   },
   {
@@ -31,7 +31,7 @@ const PAGES_DATA = [
     sortId: 2,
     title: "主标题",
     subtitle: "副标题",
-    url: "http://www.yanxiaolong.cn/",
+    url: "https://www.yanxiaolong.cn/",
     icon: ""
   }
 ]; // 网站分类列表，请按照API.md中'/getPages'接口中返回的data格式填写
